@@ -1,11 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/komigo-3d?styles=143750');
-
-
 * {
     font-family: "Roboto", sans-serif;
     font-style: normal;
-}
-
-.komigo-3d {
-    font-family: "Komigo 3D", sans-serif;
 }

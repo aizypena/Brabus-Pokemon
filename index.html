@@ -38,38 +38,28 @@
     <div id="main-container">
 
         <header class="nav sticky-top">
-            <div class="nav-container d-flex container align-items-center justify-content-between">
-                <div class="nav-left d-flex align-items-center">
-                    <a href="#">
-                        <img src="./assets/pgo-logo.webp" alt="Pokemon Go Logo" class="nav-img-logo">
-                    </a>
-                    <a href="#" class="text-decoration-none m-3">
-                        <p class="komigo-3d brabus-txt m-0">BRABUS</p>
-                    </a>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container">
+                    <div class="left-nav d-flex">
+                        <div>
+                            <img src="./assets/pgo-logo.webp" alt="Pokemon Go Icon" class="pokemon-go-icon">
+                        </div>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="./html files/shop.html" target="_blank">Shop</a>
+                            <a class="nav-link" href="./html files/about.html">About</a>
+                            <a class="nav-link" href="./html files/contact.html">Contact Us</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="nav-mid">
-                    <ul class="nav-ul">
-                        <li class="list-unstyled">
-                            <a href="#" class="text-decoration-none nav-a active nav-link" aria-current="page">HOME</a>
-                        </li>
-                        <li class="list-unstyled">
-                            <a href="./html files/shop.html" class="text-decoration-none nav-a nav-link"
-                                target="_blank">SHOP</a>
-                        </li>
-                        <li class="list-unstyled">
-                            <a href="./html files/about.html" class="text-decoration-none nav-a nav-link">ABOUT</a>
-                        </li>
-                        <li class="list-unstyled">
-                            <a href="./html files/contact.html" class="text-decoration-none nav-a nav-link">CONTACT
-                                US</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="nav-right">
-                    <button class="btn offer-btn nav-btns btn-lg">Offer Redemption</button>
-                    <button type="button" class="btn btn-outline-success signin-btn nav-btns btn-lg">Sign In</button>
-                </div>
-            </div>
+            </nav>
         </header>
 
         <section id="banner-section"></section>
