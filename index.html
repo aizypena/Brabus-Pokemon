@@ -31,6 +31,9 @@
     <link rel="stylesheet" href="./css files/header/header-style.css">
     <link rel="stylesheet" href="./css files/footer/footer-style.css">
 
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./scss/custom.css">
+
 </head>
 
 <body>
@@ -38,7 +41,7 @@
     <div id="main-container">
 
         <header class="nav sticky-top">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
                 <div class="container">
                     <div class="left-nav d-flex">
                         <div>
@@ -52,10 +55,10 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ms-auto">
-                            <a class="nav-link" href="#">Home</a>
-                            <a class="nav-link" href="./html files/shop.html" target="_blank">Shop</a>
-                            <a class="nav-link" href="./html files/about.html">About</a>
-                            <a class="nav-link" href="./html files/contact.html">Contact Us</a>
+                            <a class="nav-link link-header" href="#">HOME</a>
+                            <a class="nav-link link-header" href="./html files/shop.html" target="_blank">SHOP</a>
+                            <a class="nav-link link-header" href="./html files/about.html">ABOUT</a>
+                            <a class="nav-link link-header" href="./html files/contact.html">CONTACT US</a>
                         </div>
                     </div>
                 </div>
@@ -65,8 +68,9 @@
         <section class="vid-container">
             <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <video src="./assets/S14_Trailer_16x9_en.mp4" controls class="home-vid" id="pokemon-vid" autoplay
-                        muted></video>
+                    <video
+                        src="https://storage.googleapis.com/pgoblog/world-of-wonders/trailer/1x1/S14_Trailer_1x1_en.mp4"
+                        controls class="home-vid" id="pokemon-vid" autoplay muted></video>
                 </div>
             </div>
         </section>
@@ -76,7 +80,10 @@
         <section></section>
 
         <!-- footer section -->
-        <footer id="footer">
+        <footer id="footer" class="m-0">
+            <div class="footer-main-container container m-0">
+                <h1>hello</h1>
+            </div>
         </footer>
 
     </div>

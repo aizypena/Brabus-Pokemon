@@ -1,12 +1,14 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+// First, import Bootstrap's functions and variables only
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 
-//code to customize here
+// Then, define your variable overrides
+//$navbar-dark-color: #fff;
 
-@import "../node_modules/bootstrap/scss/maps";
-@import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/root";
+// Now, import the rest of Bootstrap
+//@import "../node_modules/bootstrap/scss/bootstrap";
 
-@import "../node_modules/bootstrap/scss/reboot";
-@import "../node_modules/bootstrap/scss/type";
+// Finally, define your custom styles
+.navbar-dark, .navbar[data-bs-theme="dark"] {
+  --bs-navbar-color: #{$navbar-dark-color};
+}

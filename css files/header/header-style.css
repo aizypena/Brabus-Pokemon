@@ -1,4 +1,12 @@
 .pokemon-go-icon {
-    height: 60px;
+    height: 55px;
     width: auto;
+}
+
+.navbar {
+    background-color: #0F224A;
+}
+
+.link-header {
+    font-size: 0.5rem;
 }
