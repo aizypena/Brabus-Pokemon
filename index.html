@@ -22,14 +22,9 @@
 
     <!-- css section -->
     <link rel="stylesheet" href="css files/style.css">
-    <link rel="stylesheet" href="./css files/index/image-style.css">
-    <link rel="stylesheet" href="./css files/index/size-style.css">
-    <link rel="stylesheet" href="./css files/index/color-style.css">
-    <link rel="stylesheet" href="./css files/index/screen-desktop-style.css">
-    <link rel="stylesheet" href="./css files/index/screen-tablet-style.css">
-    <link rel="stylesheet" href="./css files/index/screen-phone-style.css">
     <link rel="stylesheet" href="./css files/header/header-style.css">
     <link rel="stylesheet" href="./css files/footer/footer-style.css">
+    <link rel="stylesheet" href="./css files/index/size-style.css">
 
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./scss/custom.css">
@@ -55,7 +50,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ms-auto">
-                            <a class="nav-link link-header" href="#">HOME</a>
+                            <a class="nav-link link-header active" href="./index.html">HOME</a>
                             <a class="nav-link link-header" href="./html files/shop.html" target="_blank">SHOP</a>
                             <a class="nav-link link-header" href="./html files/about.html">ABOUT</a>
                             <a class="nav-link link-header" href="./html files/contact.html">CONTACT US</a>
@@ -65,13 +60,10 @@
             </nav>
         </header>
 
-        <section class="vid-container">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <video
-                        src="https://storage.googleapis.com/pgoblog/world-of-wonders/trailer/1x1/S14_Trailer_1x1_en.mp4"
-                        controls class="home-vid" id="pokemon-vid" autoplay muted></video>
-                </div>
+        <section class="vid-section">
+            <div class="vid-container mx-auto">
+                <video src="https://storage.googleapis.com/pgoblog/world-of-wonders/trailer/1x1/S14_Trailer_1x1_en.mp4"
+                    id="pokemon-vid" class="home-vid" autoplay muted></video>
             </div>
         </section>
 

@@ -9,6 +9,7 @@
 //@import "../node_modules/bootstrap/scss/bootstrap";
 
 // Finally, define your custom styles
-.navbar-dark, .navbar[data-bs-theme="dark"] {
+.navbar-dark,
+.navbar[data-bs-theme="dark"] {
   --bs-navbar-color: #{$navbar-dark-color};
 }

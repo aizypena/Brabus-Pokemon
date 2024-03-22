@@ -6,17 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="55c435ee-ae64-476e-aad5-5986e6a2c694" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css files/footer/footer-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css files/footer/footer-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css files/header/header-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css files/header/header-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/custom.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/custom.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/custom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html files/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/html files/about.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,7 +65,7 @@
       <workItem from="1710952358436" duration="3435000" />
       <workItem from="1710999041119" duration="7543000" />
       <workItem from="1711028868432" duration="165000" />
-      <workItem from="1711034925953" duration="998000" />
+      <workItem from="1711034925953" duration="2342000" />
     </task>
     <servers />
   </component>
