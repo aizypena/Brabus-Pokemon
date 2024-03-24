@@ -3,3 +3,13 @@
     color: #fff;
     padding: 5%;
 }
+
+.brabus-txt-footer {
+    font-family: "Komigo 3D", sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.brabus-txt-footer:hover {
+    color: #fff;
+}
