@@ -1,15 +1,11 @@
 // First, import Bootstrap's functions and variables only
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 
-// Then, define your variable overrides
-//$navbar-dark-color: #fff;
-
-// Now, import the rest of Bootstrap
-//@import "../node_modules/bootstrap/scss/bootstrap";
-
-// Finally, define your custom styles
-.navbar-dark,
-.navbar[data-bs-theme="dark"] {
-  --bs-navbar-color: #{$navbar-dark-color};
-}
+// Then import your custom SCSS file
+$theme-colors: (
+    "success": #000
+);
+// Finally, import the rest of Bootstrap's SCSS files
+@import "../node_modules/bootstrap/scss/buttons";
