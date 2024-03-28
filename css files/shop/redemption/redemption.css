@@ -1,0 +1,23 @@
+.store-back-btn {
+    padding: 15px 30px;
+    font-size: 1.15rem;
+    border: none;
+    border-radius: 30px;
+    background-color: inherit;
+}
+
+.store-back-btn:hover {
+    background-color: #cfdfe0;
+}
+
+.redemption-section {
+    padding: 2% 0;
+}
+
+.redemption-body {
+    width: 100%;
+}
+
+.offer-redemption-txt {
+    font-size: 2.4rem;
+}

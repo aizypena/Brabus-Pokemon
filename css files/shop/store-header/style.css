@@ -1,0 +1,59 @@
+.pokemon-go-nav-logo {
+    height: 60px;
+    width: auto;
+}
+
+#nav-header {
+    padding: 0 4%;
+    background-color: #fff;
+}
+
+.sign-in-btn {
+    width: 120px;
+    height: 50px;
+    font-size: 1.25rem;
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient(to right, #6BCCA8, #22C6BD);
+    color: #fff;
+}
+
+.redemption-btn {
+    font-size: 1.25rem;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    color: #2b4957;
+}
+
+.header-i {
+    font-size: 1.6rem;
+}
+
+.fa-user {
+    color: #518E89;
+}
+
+.fa-cart-shopping {
+    color: #518E89;
+}
+
+
+
+/* hover buttons */
+.sign-in-btn:hover {
+    background-image: linear-gradient(to right, #568f72, #108a85);
+}
+
+.redemption-btn:hover {
+    background-color: #d0f0f5;
+}
+
+.fa-user:hover {
+    color: #3A6378;
+}
+
+.fa-cart-shopping {
+    color: #3A6378;
+}
