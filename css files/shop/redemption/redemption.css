@@ -21,3 +21,17 @@
 .offer-redemption-txt {
     font-size: 2.4rem;
 }
+
+.sign-to-redeem {
+    height: 50px;
+    width: 240px;
+    border: none;
+    font-size: 1.25rem;
+    color: #fff;
+    background-image: linear-gradient(to right, #6BCCA8, #22C6BD);
+    border-radius: 30px;
+}
+
+.sign-to-redeem:hover {
+    background-image: linear-gradient(to right, #568f72, #108a85);
+}

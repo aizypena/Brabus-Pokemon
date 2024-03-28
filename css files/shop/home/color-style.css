@@ -1,0 +1,12 @@
+.limited-offer-txt {
+    color: #284554;
+}
+
+.add-to-card-btn {
+    background-image: linear-gradient(to right, #6BCCA8, #22C6BD);
+    color: #fff;
+}
+
+.add-to-card-btn:hover {
+    background-image: linear-gradient(to right, #568f72, #108a85);
+}

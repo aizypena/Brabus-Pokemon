@@ -1,3 +1,23 @@
 .pic-section {
     padding: 2% 0;
 }
+
+#items-section {
+    padding: 2% 0;
+}
+
+.card-title {
+    font-size: 1.5rem;
+}
+
+.add-to-card-btn {
+    width: 100% !important;
+    font-size: 1.25rem;
+    padding: 1.5% 0;
+    border-radius: 10px;
+    border: none;
+}
+
+.item-boxes {
+    padding: 5% 0;
+}
