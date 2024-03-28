@@ -19,4 +19,17 @@
     background-color: #cfdfe0;
 }
 
+.item-btn {
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    background-color: #518e893d;
+    border: none;
+    border-radius: 3px;
+}
+
+.item-num {
+    padding: 0 15px;
+}
+
 @media screen and (max-width: 992px) {}
