@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="../css files/shop/home/style.css">
     <link rel="stylesheet" href="../css files/shop/home/image-style.css">
     <link rel="stylesheet" href="../css files/shop/home/color-style.css">
+    <link rel="stylesheet" href="../css files/shop/home/screen-tablet.css">
+
 </head>
 
 <body>
@@ -54,8 +56,35 @@
                                 </a>
                             </li>
                             <li class="nav-item p-2 d-flex align-items-center">
-                                <a href="nav-link" aria-page="page">
-                                    <i class="fa-regular fa-cart-shopping header-i"></i>
+                                <a class="nav-link" href="./cart.html" aria-page="page">
+                                    <button type="button" class="btn" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        <i class="fa-regular fa-cart-shopping header-i"></i>
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Understood</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </a>
                             </li>
                         </ul>
@@ -174,7 +203,7 @@
 
             <div class="poke-coins">
                 <div class="item-boxes-p">
-                    <p class="limited-offer-txt display-5">Item Boxes</p>
+                    <p class="limited-offer-txt display-5">PokéCoins</p>
                 </div>
 
                 <!-- pokecoins cards -->

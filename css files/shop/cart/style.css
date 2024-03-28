@@ -1,0 +1,22 @@
+.fa-user {
+    font-size: 1.5rem;
+    color: #518E89;
+}
+
+.back-to-store {
+    padding: 2% 0;
+}
+
+.store-back-btn {
+    padding: 15px 30px;
+    font-size: 1.15rem;
+    border: none;
+    border-radius: 30px;
+    background-color: inherit;
+}
+
+.store-back-btn:hover {
+    background-color: #cfdfe0;
+}
+
+@media screen and (max-width: 992px) {}
