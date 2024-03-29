@@ -35,6 +35,14 @@
 
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 
+    <style>
+        body {
+            background-image: url('https://d2duuy9yo5pldo.cloudfront.net/dashboard-resources/niantic/1440/7cd7f310-a623-4a84-a988-aa041f7aba45.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -70,15 +78,33 @@
         <section id="contact-us-body">
             <div class="contact-main-body-container container">
                 <div class="">
-                    <p class="display-6 weight-3">CONTACT US</p>
+                    <h2 class="display-6 weight-3">CONTACT US</h2>
                 </div>
                 <div class="contact-deets">
-                    <p>Facebook: </p>
+                    <p><strong>Email:</strong> contact@pokemongo.com</p>
+                    <p><strong>Phone:</strong> +63 2 8631 POGO | +63 2 8631 7646</p>
+                    <p><strong>Address:</strong> 123 Pokémon Street, PokéCity, Pokéland</p>
+                </div>
+                <div class="contact-form mt-5">
+                    <h3>Send us a message</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
             </div>
         </section>
-
-        <section></section>
 
         <!-- footer section -->
         <footer id="footer" class="mt-5 ">
