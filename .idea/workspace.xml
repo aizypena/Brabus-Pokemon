@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="55c435ee-ae64-476e-aad5-5986e6a2c694" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css files/redemption/redemption.css" beforeDir="false" afterPath="$PROJECT_DIR$/css files/redemption/redemption.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css files/store-header/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css files/store-header/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css files/shop/signup-signin/signin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css files/shop/signup-signin/signin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html files/cart-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/html files/cart-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html files/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/html files/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html files/my-account.html" beforeDir="false" afterPath="$PROJECT_DIR$/html files/my-account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html files/offer-redemption.html" beforeDir="false" afterPath="$PROJECT_DIR$/html files/offer-redemption.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html files/shop-home.html" beforeDir="false" afterPath="$PROJECT_DIR$/html files/shop-home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/custom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html files/signup-signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/html files/signin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,13 +22,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/html files/my-account.html" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -79,6 +84,7 @@
       <workItem from="1711034925953" duration="2342000" />
       <workItem from="1711502472585" duration="15280000" />
       <workItem from="1711555127962" duration="68000" />
+      <workItem from="1711682690517" duration="18256000" />
     </task>
     <servers />
   </component>
