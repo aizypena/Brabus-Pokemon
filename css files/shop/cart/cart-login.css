@@ -1,0 +1,33 @@
+.store-back-btn {
+    padding: 15px 30px;
+    font-size: 1.15rem;
+    border: none;
+    border-radius: 30px;
+    background-color: inherit;
+}
+
+.store-back-btn:hover {
+    background-color: #cfdfe0;
+}
+
+.back-to-store {
+    padding: 2% 0;
+}
+
+.sign-to-view {
+    height: 50px;
+    width: 240px;
+    border: none;
+    font-size: 1.25rem;
+    color: #fff;
+    background-image: linear-gradient(to right, #6BCCA8, #22C6BD);
+    border-radius: 30px;
+}
+
+.sign-to-view:hover {
+    background-image: linear-gradient(to right, #568f72, #108a85);
+}
+
+.sign-in-to-view-txt {
+    font-size: 2.4rem;
+}
