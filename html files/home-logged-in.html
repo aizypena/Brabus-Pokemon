@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="../css files/shop/home/image-style.css">
     <link rel="stylesheet" href="../css files/shop/home/color-style.css">
     <link rel="stylesheet" href="../css files/shop/home/screen-tablet.css">
+    <link rel="stylesheet" href="../css files/shop/home/logged-in.css">
 
 </head>
 
@@ -46,25 +47,31 @@
                     <div class="collapse navbar-collapse redemption-cont" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="d-flex align-items-center">
-                                <a class="nav-link active" aria-current="page" href="./cart-login.html">
+                                <a class="nav-link active" aria-current="page" href="./cart.html">
                                     <i class="fa-regular fa-cart-shopping header-i"></i>
                                 </a>
                             </li>
                             <li class="d-flex align-items-center">
-                                <a class="nav-link active" aria-current="page" href="./cart-login.html">
-                                    <i class="fa-regular fa-cart-shopping header-i"></i>
-                                </a>
+                                <div class="dropdown">
+                                    <button class="btn btn-light dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-user"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-light">
+                                        <li><a class="dropdown-item" href="./my-account.html">Profile</a></li>
+                                        <li><a class="dropdown-item" href="./my-account.html">Offer Redemption</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="./shop-home.html">Log Out</a></li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-
-        <section class="container pic-section">
-            <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsite_assets%2Fhero_season_14.jpg&w=1920&q=75"
-                alt="Pokemon Go Banner" class="img-fluid banner-pic">
-        </section>
 
         <section id="items-section" class="main-items-container container">
             <div class="limited-offer-container">
@@ -85,6 +92,67 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <button class="gcash-btn">Gcash</button>
+                                                    <button class="card-btn">Card</button>
+                                                </div>
+                                                <div class="gcash-payment">
+                                                    <div class="">
+                                                        <label>Enter Gcash Number</label>
+                                                        <br>
+                                                        <input type="tel">
+                                                    </div>
+                                                    <div class="">
+                                                        <label>Enter PIN</label>
+                                                        <br>
+                                                        <input type="password">
+                                                    </div>
+                                                </div>
+                                                <div class="card-payment">
+                                                    <div class="">
+                                                        <label>Enter Account Number</label>
+                                                        <br>
+                                                        <input type="tel">
+                                                    </div>
+                                                    <div class="">
+                                                        <label>Enter PIN</label>
+                                                        <br>
+                                                        <input type="password">
+                                                    </div>
+                                                    <div class="">
+                                                        <label>Enter CCV</label>
+                                                        <br>
+                                                        <input type="password">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -311,6 +379,101 @@
                     </div>
                 </div>
             </div>
+
+            <div class="poke-coins">
+                <div class="item-boxes-p">
+                    <p class="limited-offer-txt display-5">PokéCoins</p>
+                </div>
+
+                <!-- pokecoins cards -->
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/coin1.png" class="card-img-top" alt="200 PokéCoins" />
+                            <div class="card-body">
+                                <p class="card-title item1-title">200 PokéCoins</>
+                                <p class="card-text">
+                                    ₱49.00
+                                </p>
+                                <a href="./cart-login.html">
+                                    <button class="add-to-card-btn">Add to Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/coin2.png" class="card-img-top" alt="600 PokéCoins" />
+                            <div class="card-body">
+                                <p class="card-title">600 PokéCoins</p>
+                                <p class="card-text">
+                                    ₱149.00
+                                </p>
+                                <a href="./cart-login.html">
+                                    <button class="add-to-card-btn">Add to Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/coin3.png" class="card-img-top" alt="1,300 PokéCoins" />
+                            <div class="card-body">
+                                <p class="card-title">1,300 PokéCoins</p>
+                                <p class="card-text">
+                                    ₱289.00
+                                </p>
+                                <a href="./cart-login.html">
+                                    <button class="add-to-card-btn">Add to Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/coin4.png" class="card-img-top" alt="2,700 PokéCoins" />
+                            <div class="card-body">
+                                <p class="card-title">2,700 PokéCoins</p>
+                                <p class="card-text">
+                                    ₱589.00
+                                </p>
+                                <a href="./cart-login.html">
+                                    <button class="add-to-card-btn">Add to Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/coin5.png" class="card-img-top" alt="5,600 PokéCoins" />
+                            <div class="card-body">
+                                <p class="card-title">5,600 PokéCoins</p>
+                                <p class="card-text">
+                                    ₱1,169.00
+                                </p>
+                                <a href="./cart-login.html">
+                                    <button class="add-to-card-btn">Add to Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/coin5.png" class="card-img-top" alt="15,500 PokéCoins" />
+                            <div class="card-body">
+                                <p class="card-title">15,500 PokéCoins</p>
+                                <p class="card-text">
+                                    ₱2,950.00
+                                </p>
+                                <a href="./cart-login.html">
+                                    <button class="add-to-card-btn">Add to Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- footer section -->
@@ -380,7 +543,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-
+    <script src="../js files/home.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,13 @@
+.buy-now-btn {
+    background-color: #103543;
+    width: 100%;
+    margin: 10px 0 0 0;
+    font-size: 1.25rem;
+    padding: 1.5% 0;
+    border: none;
+    border-radius: 10px;
+}
+
+.buy-now-btn:hover {
+    background-color: #164759;
+}

@@ -25,3 +25,17 @@
 .fa-user {
     font-size: 1.5rem;
 }
+
+.gcash-btn {
+    background-color: #297BFA;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+}
+
+.card-btn {
+    background-color: #403F40;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+}

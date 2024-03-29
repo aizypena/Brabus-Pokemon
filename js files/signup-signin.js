@@ -20,8 +20,8 @@ sign_in_btn2.addEventListener("click", () => {
 var password = document.getElementById("password")
     , confirm_password = document.getElementById("confirm_password");
 
-function validatePassword(){
-    if(password.value != confirm_password.value) {
+function validatePassword() {
+    if (password.value != confirm_password.value) {
         confirm_password.setCustomValidity("Passwords Don't Match");
     } else {
         confirm_password.setCustomValidity("Passwords Match");
@@ -31,7 +31,7 @@ password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
 
 
-document.getElementById('inGameName').addEventListener('input', function() {
+document.getElementById('inGameName').addEventListener('input', function () {
     let inGameName = this.value.trim();
     if (inGameName !== '') {
         generatePlayerID(inGameName);
@@ -68,13 +68,13 @@ function generatePlayerID(inGameName) {
     document.getElementById('playerID').value = playerID;
 }
 
-document.getElementById('sign-up-btn').addEventListener('click', function() {
+document.getElementById('sign-up-btn').addEventListener('click', function () {
     var pokeball = document.querySelector('.pokeball');
     pokeball.classList.add('animate-pokeball'); // Add the animation class
     pokeball.style.display = 'block'; // Ensure the Pokeball is visible
 });
 
-document.getElementById('sign-in-btn').addEventListener('click', function() {
+document.getElementById('sign-in-btn').addEventListener('click', function () {
     var pokeball = document.querySelector('.pokeball');
     pokeball.classList.remove('animate-pokeball'); // Remove the animation class
 });
@@ -82,7 +82,7 @@ document.getElementById('sign-in-btn').addEventListener('click', function() {
 
 
 //for log in btn
-document.querySelector(".sign-in-form").addEventListener("submit", function(event) {
+document.querySelector(".sign-in-form").addEventListener("submit", function (event) {
     // Prevent the default form submission behavior
     event.preventDefault();
 
@@ -92,12 +92,12 @@ document.querySelector(".sign-in-form").addEventListener("submit", function(even
     // Check if both username and password fields are not empty
     if (username !== "" && password !== "") {
         // Redirect to shop-home.html
-        window.location.href = "../html files/shop-home.html";
+        window.location.href = "../html files/home-logged-in.html";
     }
 });
 
 //signup
-document.querySelector(".sign-up-form").addEventListener("submit", function(event) {
+document.querySelector(".sign-up-form").addEventListener("submit", function (event) {
     // Prevent the default form submission behavior
     event.preventDefault();
 
