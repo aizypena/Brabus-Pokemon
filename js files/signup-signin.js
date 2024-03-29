@@ -24,10 +24,9 @@ function validatePassword(){
     if(password.value != confirm_password.value) {
         confirm_password.setCustomValidity("Passwords Don't Match");
     } else {
-        confirm_password.setCustomValidity("Password Match!");
+        confirm_password.setCustomValidity("Passwords Match");
     }
 }
-
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
 
@@ -69,8 +68,6 @@ function generatePlayerID(inGameName) {
     document.getElementById('playerID').value = playerID;
 }
 
-
-
 document.getElementById('sign-up-btn').addEventListener('click', function() {
     var pokeball = document.querySelector('.pokeball');
     pokeball.classList.add('animate-pokeball'); // Add the animation class
@@ -82,3 +79,57 @@ document.getElementById('sign-in-btn').addEventListener('click', function() {
     pokeball.classList.remove('animate-pokeball'); // Remove the animation class
 });
 
+
+
+//for log in btn
+document.querySelector(".sign-in-form").addEventListener("submit", function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    var username = document.querySelector(".sign-in-form input[type='text']").value.trim();
+    var password = document.querySelector(".sign-in-form input[type='password']").value.trim();
+
+    // Check if both username and password fields are not empty
+    if (username !== "" && password !== "") {
+        // Redirect to shop-home.html
+        window.location.href = "../html files/shop-home.html";
+    }
+});
+
+//signup
+document.querySelector(".sign-up-form").addEventListener("submit", function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Get the values of the sign-up form fields
+    var email = document.querySelector(".sign-up-form input[type='email']").value.trim();
+    var password = document.querySelector(".sign-up-form input[type='password']").value.trim();
+    var confirmPassword = document.querySelector("#confirm_password").value.trim();
+    var inGameName = document.querySelector("#inGameName").value.trim();
+    var playerID = document.querySelector("#playerID").value.trim();
+
+    // Perform validation
+    if (!isValidEmail(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+    }
+
+    if (inGameName === "" || playerID === "") {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    // If all validations pass, show success message
+    alert("You have successfully created an account. You can now sign in your account.");
+});
+
+// Function to validate email format
+function isValidEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}

@@ -9,7 +9,7 @@
     <title>signin-signup</title>
 </head>
 <body>
-<video autoplay loop id="myVideo">
+<video autoplay loop muted id="myVideo">
     <source src="../assets/pokemonvid.mp4" type="video/mp4">
 </video>
 <div class="container">
@@ -18,11 +18,11 @@
             <h2 class="title">Sign in</h2>
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Username" required>
             </div>
             <div class="input-field">
                 <i class="fas fa-user-lock"></i>
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" required>
             </div>
             <input type="submit" value="Login" class="btn">
             <p class="social-text">Or Sign in with social platform</p>
@@ -46,7 +46,7 @@
             <h2 class="title">Sign up</h2>
             <div class="input-field">
                 <i class="fas fa-envelope"></i>
-                <input type="email  " placeholder="Email">
+                <input type="email" placeholder="Email" required>
             </div>
             <div class="input-field">
                 <i class="fas fa-user-lock"></i>
@@ -64,7 +64,7 @@
                 <i class="fa-solid fa-id-badge"></i>
                 <input type="text" id="playerID" placeholder="Player ID" readonly required>
             </div>
-            <input type="submit" value="Sign up" class="btn">
+            <input type="submit" value="Sign up" class="btn signup-btn">
             <p class="social-text">Or Sign in with social platform</p>
             <div class="social-media">
                 <a href="#" class="social-icon">
@@ -89,7 +89,7 @@
                 <h3>Already a Member of the Pokemon Community?</h3>
                 <p>Welcome back! Sign in now to continue your adventure in the Pokemon world. Explore new regions, battle other trainers, and trade Pokemon to strengthen your team!</p>
 
-                <button class="btn" id="sign-in-btn">Sign in</button>
+                <button type="submit" class="btn" id="sign-in-btn">Sign in</button>
             </div>
             <div class="pokeball"></div>
         </div>
@@ -98,13 +98,13 @@
                 <h3>New to the Pokemon World?</h3>
                 <p>Join us on an epic journey to become a Pokemon Trainer! Sign up now and embark on an adventure to catch 'em all, battle other trainers, and become the ultimate Pokemon Champion!</p>
 
-                <button class="btn" id="sign-up-btn">Sign up</button>
+                <button type="submit" class="btn" id="sign-up-btn">Sign up</button>
             </div>
             <img src="../assets/Pokemon.svg" id="floatimg" alt="img" class="image">
             <div class="shadow"></div>
         </div>
     </div>
 </div>
-<script src="../js%20files/signup-signin.js"></script>
+<script src="../js files/signup-signin.js"></script>
 </body>
 </html>
