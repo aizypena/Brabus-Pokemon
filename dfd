@@ -1,0 +1,209 @@
+[33mcommit c641a48aabbb93bdbed5542d82ddc1944638a991[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Fri Mar 29 21:01:39 2024 +0800
+
+    initial home store
+
+[33mcommit 05992f3dd7984d2f619febeb630282be9e79e88a[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Fri Mar 29 18:36:15 2024 +0800
+
+    added the signup/signin files
+
+[33mcommit c39e9045f0862be5448201ceb189b53714f5f6a5[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Fri Mar 29 18:28:03 2024 +0800
+
+    deleted some files
+
+[33mcommit 40be249670ca42fce712342e5da87c39d64b28be[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Fri Mar 29 09:44:02 2024 +0800
+
+    added sign in to view cart feature
+
+[33mcommit 08c1764fe07c451a0a75989693a527f96c0c63ab[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Fri Mar 29 00:00:51 2024 +0800
+
+    cart (not finished yet)
+
+[33mcommit 9d19e7feee356a7c1e0661d7325915debba0ef09[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Thu Mar 28 22:28:10 2024 +0800
+
+    update as of 10:28
+
+[33mcommit 26db25517bf8e2daa870f6d89a96c7156328779f[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Thu Mar 28 19:20:50 2024 +0800
+
+    deleted screen-tablet.css file
+
+[33mcommit 898023d9b74dd0f0c19e39a6483d8f934c714967[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Thu Mar 28 19:20:09 2024 +0800
+
+    to delete
+
+[33mcommit 47c67a70392a5595cc86a6073a942e680533b5a8[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Thu Mar 28 19:08:32 2024 +0800
+
+    added some items in home web store
+
+[33mcommit 213b1d6c7d6f97a5289eb88db71ead90681eb365[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Thu Mar 28 13:56:00 2024 +0800
+
+    linked some css
+
+[33mcommit bb9689d7418ae2e51984bdf414bb020ccb983ddb[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Thu Mar 28 13:49:12 2024 +0800
+
+    03/28/24 update
+
+[33mcommit 91562f4f6d1fac45e3a6e53ba484edb198fe3327[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Wed Mar 27 12:20:48 2024 +0800
+
+    update as of 27/03/24
+
+[33mcommit 487a1c2ad6f4afad9c0816abdcbf22009039de7c[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Wed Mar 27 12:09:27 2024 +0800
+
+    redemption page
+
+[33mcommit fd2aa9ff642e981691522af49d97e736abce641d[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Wed Mar 27 10:45:40 2024 +0800
+
+    to continue later
+
+[33mcommit 784c79c5f1842f579cdfd19c1e6893471bb34c0a[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Mon Mar 25 21:52:10 2024 +0800
+
+    indent and added contents in about and contact us
+
+[33mcommit 8f0a1c5b1ba13936367b85e13e2aeeedf00df0d4[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Mon Mar 25 20:43:15 2024 +0800
+
+    home, about, contact us footer update
+
+[33mcommit d4b96b10ac667cbb78448f225c787d3063efbdbc[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Mon Mar 25 20:34:54 2024 +0800
+
+    footer update
+
+[33mcommit e0adf3f279925046dca4d24e4fe83770ded74e07[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Mon Mar 25 19:32:37 2024 +0800
+
+    removed brabus text in nav
+
+[33mcommit 089e0cc98763a8a0427887884de74af928b9b057[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Mon Mar 25 19:25:44 2024 +0800
+
+    footer update
+
+[33mcommit f345a1f70030a76a4e38f1443687e95c544227c2[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Sun Mar 24 21:05:52 2024 +0800
+
+    fixed navbar
+
+[33mcommit c70eb8d016edfc2829c46cfc6d6cf1da0a0da406[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Sun Mar 24 03:07:49 2024 +0800
+
+    added some files
+
+[33mcommit 7d0e1b66be64b543e8f8a3305530a820b444167c[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Sun Mar 24 02:20:03 2024 +0800
+
+    nav update
+
+[33mcommit ef99640aeec4433fbf652679b1006f1a1452f55c[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Fri Mar 22 22:56:32 2024 +0800
+
+    22/03/24 update
+
+[33mcommit 6208a583ee12aa851f6ca9c59716830b00d0ff22[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Thu Mar 21 23:57:48 2024 +0800
+
+    added files in about-css
+
+[33mcommit 27aef2d0ac88a47e69fc2994143ec5074e9bc45f[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Sun Mar 17 17:30:28 2024 +0800
+
+    remove video mp4
+
+[33mcommit 7e2552e723f90635f2b9289fa2f025c7bd0efa0c[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Sun Mar 17 17:12:55 2024 +0800
+
+    video playback
+
+[33mcommit 0f7eed21d3d1f3c7afdf789fdbd5083f96109823[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Sat Mar 16 23:49:08 2024 +0800
+
+    made navbar responsive
+
+[33mcommit 8ef62f17869c4481fe5e242d09ff24b601e93c3a[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Sat Mar 16 16:54:47 2024 +0800
+
+    update 4:55
+
+[33mcommit 077e9fa5a8155de1eeb31763ae88178491f25761[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Sat Mar 16 14:08:08 2024 +0800
+
+    file organization header
+
+[33mcommit eb2760127f877d2d7368fd57358fb5718c1bfcce[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Fri Mar 15 02:15:31 2024 +0800
+
+    13/15/24 2:15am update
+
+[33mcommit b62dfe4b64e100a87dfff46a28857107b36abd83[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Fri Mar 15 00:46:19 2024 +0800
+
+    added screen sizes files
+
+[33mcommit e12c9d07c1398fdcbb5bcb872bb1f62491eec57a[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Fri Mar 15 00:16:22 2024 +0800
+
+    first commit in 03/15/24
+
+[33mcommit da6f1c4c26e1a53bdc24694301d5764eafbbad91[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Thu Mar 14 02:28:01 2024 +0800
+
+    03/14/24 first
+
+[33mcommit bf28d25783babff40def99f72dc36920def49ecd[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Wed Mar 13 21:37:27 2024 +0800
+
+    03/13/24 added some files
+
+[33mcommit 9925f363242cffaaebded7ab7da78cb5cfe4b9dc[m
+Author: julyza pena <jbpena101@gmail.com>
+Date:   Wed Mar 13 15:29:06 2024 +0800
+
+    first
