@@ -35,6 +35,14 @@
 
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 
+    <style>
+        body {
+            background-image: url('https://d2duuy9yo5pldo.cloudfront.net/dashboard-resources/niantic/1440/7cd7f310-a623-4a84-a988-aa041f7aba45.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -69,16 +77,53 @@
 
         <section id="contact-us-body">
             <div class="contact-main-body-container container">
-                <div class="">
-                    <p class="display-6 weight-3">CONTACT US</p>
+                <div>
+                    <h2 class="display-6 weight-3">CONTACT US</h2>
                 </div>
                 <div class="contact-deets">
-                    <p>Facebook: </p>
+                    <p><strong>Email:</strong> contact@pokemongo.com</p>
+                    <p><strong>Phone:</strong> +63 2 8631 POGO | +63 2 8631 7646</p>
+                    <p><strong>Address:</strong> 123 Pokémon Street, PokéCity, Pokéland</p>
                 </div>
-            </div>
-        </section>
+                <div class="contact-form mt-5 bg-light p-4 rounded">
+                    <h3>Send us a message</h3>
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
 
-        <section></section>
+                <script>
+                    document.getElementById("contact-form").addEventListener("submit", function (event) {
+                        event.preventDefault(); // Prevent the form from submitting normally
+
+                        // Check if all fields are filled out
+                        var name = document.getElementById("name").value;
+                        var email = document.getElementById("email").value;
+                        var message = document.getElementById("message").value;
+
+                        if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                            alert("Please fill out the form first before clicking the Submit option.");
+                        } else {
+                            // All fields are filled out, display success message
+                            alert("Message received. We'll get back to you shortly.");
+                            // Optionally, you can submit the form here if needed
+                            // document.getElementById("contact-form").submit();
+                        }
+                    });
+                </script>
+        </section>
 
         <!-- footer section -->
         <footer id="footer" class="mt-5 ">
@@ -131,7 +176,7 @@
                         <p class="text-center">
                             No copyright infringement is intended. All rights and credits go to the original authors and
                             owners of any content used or referenced in this project. This project is created for
-                            educational purposes only as part of a school paroject. The content, ideas, and concepts
+                            educational purposes only as part of a school project. The content, ideas, and concepts
                             used in this project are intended for academic use. We respect and acknowledge the rights of
                             content creators and their respective work.
                         </p>
