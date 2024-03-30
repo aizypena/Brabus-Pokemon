@@ -1,0 +1,53 @@
+.fa-user {
+    font-size: 1.5rem;
+}
+
+.back-to-store {
+    padding: 2% 0;
+}
+
+.store-back-btn {
+    padding: 15px 30px;
+    font-size: 1.15rem;
+    border: none;
+    border-radius: 30px;
+    background-color: inherit;
+}
+
+.store-back-btn:hover {
+    background-color: #cfdfe0;
+}
+
+.redemption-txt {
+    font-size: 2.4rem;
+    color: #37635f;
+}
+
+.code-txt {
+    font-size: 1.5rem;
+    color: #37635f;
+}
+
+.code-input {
+    width: 300px;
+    color: #37635f;
+}
+
+#redemption-content {
+    width: 100vw;
+}
+
+.btn-user-inp {
+    padding: 1.5%;
+}
+
+.apply-btn {
+    font-size: 1.15rem;
+    color: #fff;
+    background-color: #37635f;
+}
+
+.apply-btn:hover {
+    background-color: #4d8a85;
+    color: #fff;
+}

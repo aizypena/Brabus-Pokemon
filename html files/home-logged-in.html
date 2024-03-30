@@ -59,7 +59,8 @@
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-light">
                                         <li><a class="dropdown-item" href="./my-account.html">Profile</a></li>
-                                        <li><a class="dropdown-item" href="./my-account.html">Offer Redemption</a></li>
+                                        <li><a class="dropdown-item" href="./redemption.html">Offer Redemption</a>
+                                        </li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
@@ -110,46 +111,54 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
-                                            <div class="modal-body">
-                                                <div>
-                                                    <button class="gcash-btn">Gcash</button>
-                                                    <button class="card-btn">Card</button>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="gcash-payment">
-                                                    <div class="">
-                                                        <label>Enter Gcash Number</label>
-                                                        <br>
-                                                        <input type="tel">
-                                                    </div>
-                                                    <div class="">
-                                                        <label>Enter PIN</label>
-                                                        <br>
-                                                        <input type="password">
-                                                    </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
                                                 </div>
-                                                <div class="card-payment">
-                                                    <div class="">
-                                                        <label>Enter Account Number</label>
-                                                        <br>
-                                                        <input type="tel">
-                                                    </div>
-                                                    <div class="">
-                                                        <label>Enter PIN</label>
-                                                        <br>
-                                                        <input type="password">
-                                                    </div>
-                                                    <div class="">
-                                                        <label>Enter CCV</label>
-                                                        <br>
-                                                        <input type="password">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-primary">Buy Now</button>
-                                            </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -167,6 +176,76 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -179,6 +258,77 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -193,6 +343,77 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -207,6 +428,77 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -231,12 +523,83 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="../assets/item10.png" class="card-img-top" alt="Great Box" />
+                            <img src="../assets/item17.png" class="card-img-top" alt="Great Box" />
                             <div class="card-body">
                                 <p class="card-title">Great Box</p>
                                 <p class="card-text">
@@ -245,6 +608,502 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/item18.png" class="card-img-top" alt="Special Box" />
+                            <div class="card-body">
+                                <p class="card-title">Special Box</p>
+                                <p class="card-text">
+                                    ₱89.00
+                                </p>
+                                <a href="./cart-login.html">
+                                    <button class="add-to-card-btn">Add to Cart</button>
+                                </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/item19.png" class="card-img-top" alt="Bronze Box" />
+                            <div class="card-body">
+                                <p class="card-title">Bronze Box</p>
+                                <p class="card-text">
+                                    ₱99.00
+                                </p>
+                                <a href="./cart-login.html">
+                                    <button class="add-to-card-btn">Add to Cart</button>
+                                </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/item20.png" class="card-img-top" alt="Silver Box" />
+                            <div class="card-body">
+                                <p class="card-title">Silver Box</p>
+                                <p class="card-text">
+                                    ₱129.00
+                                </p>
+                                <a href="./cart-login.html">
+                                    <button class="add-to-card-btn">Add to Cart</button>
+                                </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/item21.png" class="card-img-top" alt="Gold Box" />
+                            <div class="card-body">
+                                <p class="card-title">Gold Box</p>
+                                <p class="card-text">
+                                    ₱179.00
+                                </p>
+                                <a href="./cart-login.html">
+                                    <button class="add-to-card-btn">Add to Cart</button>
+                                </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/item8.png" class="card-img-top" alt="Go Rocket Box" />
+                            <div class="card-body">
+                                <p class="card-title">Go Rocket Box</p>
+                                <p class="card-text">
+                                    ₱289.00
+                                </p>
+                                <a href="./cart-login.html">
+                                    <button class="add-to-card-btn">Add to Cart</button>
+                                </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -269,6 +1128,77 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -283,6 +1213,77 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -297,6 +1298,77 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -311,6 +1383,77 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -325,12 +1468,83 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="../assets/coin5.png" class="card-img-top" alt="15,500 PokéCoins" />
+                            <img src="../assets/coin6.png" class="card-img-top" alt="15,500 PokéCoins" />
                             <div class="card-body">
                                 <p class="card-title">15,500 PokéCoins</p>
                                 <p class="card-text">
@@ -339,6 +1553,77 @@
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -362,6 +1647,77 @@
                                     ₱299.00
                                 </p>
                                 <button class="add-to-card-btn">Add to Cart</button>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -374,100 +1730,856 @@
                                     ₱449.00
                                 </p>
                                 <button class="add-to-card-btn">Add to Cart</button>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- lure modules -->
             <div class="poke-coins">
                 <div class="item-boxes-p">
-                    <p class="limited-offer-txt display-5">PokéCoins</p>
+                    <p class="limited-offer-txt display-5">Lure Modules</p>
                 </div>
 
-                <!-- pokecoins cards -->
+                <!-- lure modules card -->
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
                         <div class="card">
-                            <img src="../assets/coin1.png" class="card-img-top" alt="200 PokéCoins" />
+                            <img src="../assets/item11.png" class="card-img-top" alt="Lure Module" />
                             <div class="card-body">
-                                <p class="card-title item1-title">200 PokéCoins</>
+                                <p class="card-title item1-title">Lure Module</>
                                 <p class="card-text">
                                     ₱49.00
                                 </p>
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="../assets/coin2.png" class="card-img-top" alt="600 PokéCoins" />
+                            <img src="../assets/item12.png" class="card-img-top" alt="Glacial Lure Module" />
                             <div class="card-body">
-                                <p class="card-title">600 PokéCoins</p>
+                                <p class="card-title">Glacial Lure Module</p>
                                 <p class="card-text">
                                     ₱149.00
                                 </p>
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="../assets/coin3.png" class="card-img-top" alt="1,300 PokéCoins" />
+                            <img src="../assets/item13.png" class="card-img-top" alt="Mossy Lure Module" />
                             <div class="card-body">
-                                <p class="card-title">1,300 PokéCoins</p>
+                                <p class="card-title">Mossy Lure Module</p>
                                 <p class="card-text">
-                                    ₱289.00
+                                    ₱149.00
                                 </p>
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="../assets/coin4.png" class="card-img-top" alt="2,700 PokéCoins" />
+                            <img src="../assets/item14.png" class="card-img-top" alt="Magnetic Lure Module" />
                             <div class="card-body">
-                                <p class="card-title">2,700 PokéCoins</p>
+                                <p class="card-title">Magnetic Lure Module</p>
                                 <p class="card-text">
-                                    ₱589.00
+                                    ₱149.00
                                 </p>
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="../assets/coin5.png" class="card-img-top" alt="5,600 PokéCoins" />
+                            <img src="../assets/item15.png" class="card-img-top" alt="Rainy Lure Module" />
                             <div class="card-body">
-                                <p class="card-title">5,600 PokéCoins</p>
+                                <p class="card-title">Rainy Lure Module</p>
                                 <p class="card-text">
-                                    ₱1,169.00
+                                    ₱149.00
                                 </p>
                                 <a href="./cart-login.html">
                                     <button class="add-to-card-btn">Add to Cart</button>
                                 </a>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upgrades -->
+            <div class="item-boxes">
+                <div class="item-boxes-p">
+                    <p class="limited-offer-txt display-5">Upgrades</p>
+                </div>
+
+                <!-- card section of upgrades -->
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/item1.png" class="card-img-top" alt="Item Bag" />
+                            <div class="card-body">
+                                <p class="card-title item1-title">Item Bag</>
+                                <p class="card-text">
+                                    ₱50.00
+                                </p>
+                                <button class="add-to-card-btn">Add to Cart</button>
+                            </div>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                Buy Now
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                Method</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <form id="paymentForm">
+                                            <div class="modal-body">
+                                                <div>
+                                                    <button class="gcash-btn">Gcash</button>
+                                                    <button class="card-btn">Card</button>
+                                                </div>
+                                                <div class="gcash-payment">
+                                                    <div>
+                                                        <label>Enter Gcash Number</label>
+                                                        <br>
+                                                        <input placeholder="09123456789" class="gcash-input"
+                                                            id="gcashNumber" type="tel" required>
+                                                    </div>
+                                                    <div>
+                                                        <label>Enter PIN</label>
+                                                        <br>
+                                                        <input class="gcash-input" id="gcashPin" type="password"
+                                                            required>
+                                                    </div>
+                                                </div>
+                                                <div class="card-payment" style="display: none;">
+                                                    <div>
+                                                        <label>Enter Account Number</label>
+                                                        <br>
+                                                        <input required class="num-input input-box card-input"
+                                                            type="tel">
+                                                    </div>
+                                                    <div>
+                                                        <label>Enter MM/DD</label>
+                                                        <br>
+                                                        <input required class="pin-input input-box card-input"
+                                                            type="text">
+                                                    </div>
+                                                    <div>
+                                                        <label>Enter CCV</label>
+                                                        <br>
+                                                        <input required class="ccv-input input-box card-input"
+                                                            type="password">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                    Now</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/item2.png" class="card-img-top" alt="Pokemon Storage" />
+                            <div class="card-body">
+                                <p class="card-title item1-title">Pokémon Storage</>
+                                <p class="card-text">
+                                    ₱75.00
+                                </p>
+                                <button class="add-to-card-btn">Add to Cart</button>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="../assets/coin5.png" class="card-img-top" alt="15,500 PokéCoins" />
+                            <img src="../assets/item16.png" class="card-img-top" alt="Team Medallion" />
                             <div class="card-body">
-                                <p class="card-title">15,500 PokéCoins</p>
+                                <p class="card-title item1-title">Team Medallion</>
                                 <p class="card-text">
-                                    ₱2,950.00
+                                    ₱799.00
                                 </p>
-                                <a href="./cart-login.html">
-                                    <button class="add-to-card-btn">Add to Cart</button>
-                                </a>
+                                <button class="add-to-card-btn">Add to Cart</button>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="../assets/item22.png" class="card-img-top" alt="Postcard Pages" />
+                            <div class="card-body">
+                                <p class="card-title item1-title">Postcard Pages</>
+                                <p class="card-text">
+                                    ₱99.00
+                                </p>
+                                <button class="add-to-card-btn">Add to Cart</button>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn buy-now-btn" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" style="color: #ffffff;">
+                                    Buy Now
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Payment
+                                                    Method</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form id="paymentForm">
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <button class="gcash-btn">Gcash</button>
+                                                        <button class="card-btn">Card</button>
+                                                    </div>
+                                                    <div class="gcash-payment">
+                                                        <div>
+                                                            <label>Enter Gcash Number</label>
+                                                            <br>
+                                                            <input placeholder="09123456789" class="gcash-input"
+                                                                id="gcashNumber" type="tel" required>
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter PIN</label>
+                                                            <br>
+                                                            <input class="gcash-input" id="gcashPin" type="password"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-payment" style="display: none;">
+                                                        <div>
+                                                            <label>Enter Account Number</label>
+                                                            <br>
+                                                            <input required class="num-input input-box card-input"
+                                                                type="tel">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter MM/DD</label>
+                                                            <br>
+                                                            <input required class="pin-input input-box card-input"
+                                                                type="text">
+                                                        </div>
+                                                        <div>
+                                                            <label>Enter CCV</label>
+                                                            <br>
+                                                            <input required class="ccv-input input-box card-input"
+                                                                type="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                                        Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

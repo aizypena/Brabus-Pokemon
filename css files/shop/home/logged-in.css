@@ -11,3 +11,16 @@
 .buy-now-btn:hover {
     background-color: #164759;
 }
+
+.gcash-input,
+.card-input {
+    border-radius: 30px;
+    height: 40px;
+    width: 50%;
+    padding: 0 15px;
+}
+
+.gcash-payment,
+.card-payment {
+    padding: 3%;
+}
