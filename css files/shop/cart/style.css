@@ -32,4 +32,15 @@
     padding: 0 15px;
 }
 
-@media screen and (max-width: 992px) {}
+.check-out-btn {
+    font-size: 1.25rem;
+    padding: 1.05% 1.7%;
+    border: none;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #6BCCA8, #22C6BD);
+    color: #fff;
+}
+
+.check-out-btn:hover {
+    background-image: linear-gradient(to right, #568f72, #108a85);
+}

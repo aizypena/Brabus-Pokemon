@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="../css files/shop/cart/style.css">
     <link rel="stylesheet" href="../css files/shop/store-header/style.css">
     <link rel="stylesheet" href="../css files/shop/cart/image-style.css">
+    <link rel="stylesheet" href="../css files/shop/store-footer/style.css">
+    <link rel="stylesheet" href="../css files/shop/home/logged-in.css">
+    <link rel="stylesheet" href="../css files/shop/home/style.css">
 
 </head>
 
@@ -170,7 +173,129 @@
             </div>
         </section>
 
-        <footer></footer>
+        <section id="check-out-btn">
+            <div class="check-out-cont d-flex justify-content-center p-5">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    class="check-out-btn">Check Out</button>
+            </div>
+
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="paymentForm">
+                                <div class="modal-body">
+                                    <div>
+                                        <button class="gcash-btn">Gcash</button>
+                                        <button class="card-btn">Card</button>
+                                    </div>
+                                    <div class="gcash-payment">
+                                        <div>
+                                            <label>Enter Gcash Number</label>
+                                            <br>
+                                            <input placeholder="09123456789" class="gcash-input" id="gcashNumber"
+                                                type="tel" required>
+                                        </div>
+                                        <div>
+                                            <label>Enter PIN</label>
+                                            <br>
+                                            <input class="gcash-input" id="gcashPin" type="password" required>
+                                        </div>
+                                    </div>
+                                    <div class="card-payment" style="display: none;">
+                                        <div>
+                                            <label>Enter Account Number</label>
+                                            <br>
+                                            <input required class="num-input input-box card-input" type="tel">
+                                        </div>
+                                        <div>
+                                            <label>Enter MM/DD</label>
+                                            <br>
+                                            <input required class="pin-input input-box card-input" type="text">
+                                        </div>
+                                        <div>
+                                            <label>Enter CCV</label>
+                                            <br>
+                                            <input required class="ccv-input input-box card-input" type="password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-success" id="buyNowBtn">Buy
+                                        Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer" class="mt-5 ">
+            <div class="footer-main-container container m-0 flex-column align-items-center">
+                <div class="footer-links-container">
+                    <hr class="footer-hr hr-1 mx-auto">
+                    <div class="footer-links d-flex justify-content-center">
+                        <a href="https://www.facebook.com/PokemonGO/" target="_blank" class="text-decoration-none p-3">
+                            <i class="fa-brands fa-facebook footer-logo" style="color: #ffffff;" title="Facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg" target="_blank"
+                            class="text-decoration-none p-3">
+                            <i class="fa-brands fa-youtube footer-logo" style="color: #ffffff;" title="YouTube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pokemongoapp/" target="_blank"
+                            class="text-decoration-none p-3">
+                            <i class="fa-brands fa-instagram footer-logo" style="color: #ffffff;" title="Instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@pokemongo" target="_blank" class="text-decoration-none p-3">
+                            <i class="fa-brands fa-tiktok footer-logo" style="color: #ffffff;" title="TikTok"></i>
+                        </a>
+                    </div>
+                    <hr class="footer-hr hr-2 mx-auto">
+                </div>
+
+                <div class="brabus-niantic d-flex justify-content-center align-items-center">
+                    <div class="p-3">
+                        <a href="#">
+                            <img src="../assets/pokemon-brabus(dark).png" alt="Pokemon x Brabus"
+                                title="Pokemon x Brabus Home" class="footer-brabus-logo">
+                        </a>
+                    </div>
+                    <div class="p-3">
+                        <a href="https://nianticlabs.com/" target="_blank">
+                            <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsite_assets%2Fniantic-logo.png&w=64&q=75"
+                                class="footer-niantic-logo" title="Niantic Inc.">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-text-content container-fluid">
+                    <div class="copyright-container">
+                        <p class="text-center">©2024 Pokemon in collaboration with BRABUS / ©2024 Niantic, Inc. ©2024
+                            Pokémon. ©1995–2024
+                            Nintendo / Creatures Inc. / GAME FREAK inc.
+                            Pokémon and Pokémon character names are trademarks of Nintendo.</p>
+                    </div>
+                    <div class="p-5">
+                        <p class="text-center text-warning">** DISCLAIMER **</p>
+                        <p class="text-center">
+                            No copyright infringement is intended. All rights and credits go to the original authors and
+                            owners of any content used or referenced in this project. This project is created for
+                            educational purposes only as part of a school project. The content, ideas, and concepts
+                            used in this project are intended for academic use. We respect and acknowledge the rights of
+                            content creators and their respective work.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     </div>
 
@@ -181,6 +306,7 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
     <script src="../js files/cart.js"></script>
+    <script src="../js files/home.js"></script>
 
 </body>
 
