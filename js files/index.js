@@ -1,13 +1,12 @@
 
-//LOOPING THE VIDEO IN THE HOMEPAGE
-var video = document.getElementById("pokemon-vid");
+// Get the button element
+const buyTicketBtn = document.querySelector('.buy-ticket-btn');
 
-// Function to check if the video has ended
-function checkVideoEnded() {
-    if (video.ended) {
-        video.currentTime = 0;
-        video.play();
-    }
-}
+// Add click event listener
+buyTicketBtn.addEventListener('click', function () {
+    // URL to open in new tab
+    const url = 'https://tickets.nianticlabs.com/events/#/login?returnUrl=%2Feventlisting&appId=pgo'; // Replace 'https://example.com' with your desired URL
 
-video.addEventListener("ended", checkVideoEnded);
+    // Open the URL in a new tab
+    window.open(url, '_blank');
+});
